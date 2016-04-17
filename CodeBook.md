@@ -17,15 +17,40 @@ For each record it is provided:
 * Its activity label. 
 * An identifier of the subject who carried out the experiment.
 
-## Transformations performed on the data set
+The dataset includes the following files:
+* 'README.txt'
+* 'features_info.txt': Shows information about the variables used on the feature vector.
+* 'features.txt': List of all features.
+* 'activity_labels.txt': Links the class labels with their activity name.
+* 'train/X_train.txt': Training set.
+* 'train/y_train.txt': Training labels.
+* 'test/X_test.txt': Test set.
+* 'test/y_test.txt': Test labels.
+
+## Transformations performed on the data set and variables
 **To merge the training and the test sets to create one data set**
+Data sets and labels for the training and tests groups were obtaines as a table. Besides, activities and features were imported.
+Data sets and labels of both groups were merged using "rbind" function.
+
+*features* table with all the features
+*activities* table with the lable of all the activities
+*XTraining and XTest* tables with the data sets of the training and tests groups
+*subjectsTest and subjectsTest* tables with the identification of each subject for the training and tests groups
+*X* Merged data sets
+*Y* Merged labels
+*subjects* Merged subjects ID
 
 **To extract the mean and standard deviation for each measurement**
+The indexes of the measurements about the "mean" and "standard deviation" were obtained using the function "grep", looking for the indexes which variables contain "mean()" or "std()".
+The data of these measurements were stored in "measures" using the indexes obtained previously.
+
+*index* index of the measures about the "mean" and "standard deviation"
+*measures* data set of the measures about the "mean" and "standard deviation"
 
 **To use descriptive activity names to name the activities in the data set**
+The values of the activities were changed with the corresponding label stored in the table activities.
 
 **Appropriately labels the data set with descriptive variable names**
 
 **To create a tidy data set with the average of each variable for each activity and each subject**
 
-## Variables
