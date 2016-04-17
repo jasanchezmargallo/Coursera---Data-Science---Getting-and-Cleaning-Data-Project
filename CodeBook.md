@@ -28,38 +28,48 @@ The dataset includes the following files:
 * 'test/y_test.txt': Test labels.
 
 ## Transformations performed on the data set and variables
-**To merge the training and the test sets to create one data set**
-Data sets and labels for the training and tests groups were obtaines as a table. Besides, activities and features were imported.
+**1. To merge the training and the test sets to create one data set**
+Data sets and labels for the training and tests groups were obtained as a table. Besides, activities and features were imported.
 Data sets and labels of both groups were merged using "rbind" function.
 
-*features* table with all the features
+*features*: Table with all the features.
 
-*activities* table with the lable of all the activities
+*activities*: Table with the lable of all the activities.
 
-*XTraining and XTest* tables with the data sets of the training and tests groups
+*XTraining and XTest*: Tables with the data sets of the training and test groups.
 
-*subjectsTest and subjectsTest* tables with the identification of each subject for the training and tests groups
+*subjectsTest and subjectsTest*: Tables with the identification of each subject for the training and test groups.
 
-*X* Merged data sets
+*mergedX*: Merged data sets.
 
-*Y* Merged labels
+*mergedY*: Merged labels.
 
-*subjects* Merged subjects ID
+*subjects*: Merged subjects ID.
 
 
-**To extract the mean and standard deviation for each measurement**
+**2. To extract the mean and standard deviation for each measurement**
 The indexes of the measurements about the "mean" and "standard deviation" were obtained using the function "grep", looking for the indexes which variables contain "mean()" or "std()".
 The data of these measurements were stored in "measures" using the indexes obtained previously.
 
-*index* index of the measures about the "mean" and "standard deviation"
+*index*: Indexes of the measures about the "mean" and "standard deviation".
 
-*measures* data set of the measures about the "mean" and "standard deviation"
+*measures*: Data set of the measures about the "mean" and "standard deviation".
 
 
-**To use descriptive activity names to name the activities in the data set**
-The values of the activities were changed with the corresponding label stored in the table activities.
+**3. To use descriptive activity names to name the activities in the data set**
+The values of the activities were changed to the corresponding label stored in the table activities.
 
-**Appropriately labels the data set with descriptive variable names**
 
-**To create a tidy data set with the average of each variable for each activity and each subject**
+**4. Appropriately labels the data set with descriptive variable names**
+The names of the varibles in "measures" were changed to the lables stored in "features" using the index computed in the step 2.
+The column of the "subjects" and "mergedY" tables were changed to "ID" and "Activity", respectively.
 
+
+**5. To create a tidy data set with the average of each variable for each activity and each subject**
+A table combining the data of "subjects", "mergedY" and "measures" was created.
+A new table was computed by means of applying the mean function (lapply function) to the subset of variables (.SD) for each "ID" and "Activity".
+Finally, the cleaned data set was written into a text file using the function "write.table"
+
+*cleanDataTable*: Table wuth the combined data of "subjects", "mergedY" and "measures" was created.
+
+*cleanDataTableAverages*: Table with the average of each variable for each activity and each subject.
