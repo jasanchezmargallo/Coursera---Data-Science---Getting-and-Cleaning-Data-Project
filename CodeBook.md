@@ -4,10 +4,10 @@ A code book that describes the variables, the data, and any transformations or w
 ## Data set information
 **Human Activity Recognition Using Smartphones Dataset**
 http://archive.ics.uci.edu/ml/datasets/Human+Activity+Recognition+Using+Smartphones
-Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto.
+Jorge L. Reyes-Ortiz, Davide Anguita, Alessandro Ghio, Luca Oneto
 Smartlab - Non Linear Complex Systems Laboratory
-DITEN - Università degli Studi di Genova.
-Via Opera Pia 11A, I-16145, Genoa, Italy.
+DITEN - Università degli Studi di Genova
+Via Opera Pia 11A, I-16145, Genoa, Italy
 activityrecognition@smartlab.ws
 www.smartlab.ws
 
