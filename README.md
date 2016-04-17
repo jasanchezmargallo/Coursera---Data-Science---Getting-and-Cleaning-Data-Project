@@ -2,6 +2,7 @@
 This repository contains the files for the Getting and Cleaning Data Course Project.
 
 ## run_analysis.R
+R script to transform raw data set in a tidy one.
 
 ## Tidy_Dat_Set.txt
 Tidy data set created in step 5 of the instructions.
