@@ -1,13 +1,14 @@
 # Coursera, Data-Science - Getting and Cleaning Data Project
 This repository contains the files for the Getting and Cleaning Data Course Project.
 
-## run_analysis.R
+## Files in this reposritory
+### run_analysis.R
 R script to transform raw data set in a tidy one.
 
-## Tidy_Dat_Set.txt
+### Tidy_Dat_Set.txt
 Tidy data set created in step 5 of the instructions.
 
-## CodeBook.md
+### CodeBook.md
 A code book that describes the variables, the data, and any transformations or work that you performed to clean up.
 
 ## Objectives of the project
